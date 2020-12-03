@@ -4,6 +4,7 @@ const Wrapper = styled.footer`
   display: flex;
   justify-content: space-between;
   padding: 3em 0;
+  padding-top: 1em;
   border-top: 1px solid #666;
 `;
 

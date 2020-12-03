@@ -2,6 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import A from 'components/A';
+import CenteredSection from 'components/CenteredSection';
 import LocaleToggle from 'containers/LocaleToggle';
 import Wrapper from './Wrapper';
 import messages from './messages';
@@ -9,7 +10,16 @@ import messages from './messages';
 function Footer() {
   return (
     <Wrapper>
-      <section>
+      <CenteredSection>
+        <FormattedMessage
+          {...messages.developerMessage}
+          values={{
+            author: <A href="https://github.com/mliu356" target="_blank">Michelle Liu</A>,
+          }}
+        />
+        
+      </CenteredSection>
+      {/* <section>
         <FormattedMessage {...messages.licenseMessage} />
       </section>
       <section>
@@ -22,7 +32,7 @@ function Footer() {
             author: <A href="https://twitter.com/mxstbr">Max Stoiber</A>,
           }}
         />
-      </section>
+      </section> */}
     </Wrapper>
   );
 }

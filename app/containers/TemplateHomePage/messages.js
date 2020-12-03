@@ -1,25 +1,13 @@
 /*
- * HomePage Messages
+ * TemplateHomePage Messages
  *
- * This contains all the text for the HomePage component.
+ * This contains all the text for the TemplateHomePage component.
  */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'boilerplate.containers.HomePage';
+export const scope = 'boilerplate.containers.TemplateHomePage';
 
 export default defineMessages({
-  michelleTitle: {
-    id: `${scope}.michelle.title`,
-    defaultMessage: 'Hello! I\'m Michelle.',
-  },
-  bioMessage: {
-    id: `${scope}.bio.message`,
-    defaultMessage: 'I\'m currently a grad student at Stanford and I like corn...',
-  },
-  introMessage: {
-    id: `${scope}.intro.message`,
-    defaultMessage: `Check out some of {item1}, {item2}, or {item3} while you're here.`,
-  },
   startProjectHeader: {
     id: `${scope}.start_project.header`,
     defaultMessage: 'Start your next react project in seconds',

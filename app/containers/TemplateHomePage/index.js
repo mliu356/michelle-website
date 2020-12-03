@@ -1,5 +1,5 @@
 /*
- * HomePage
+ * TemplateHomePage
  *
  * This is the first thing users see of our App, at the '/' route
  */
@@ -8,7 +8,6 @@ import React, { useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
@@ -20,9 +19,7 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from 'containers/App/selectors';
-import A from 'components/A';
-import H1 from 'components/H1';
-import H3 from 'components/H3';
+import H2 from 'components/H2';
 import ReposList from 'components/ReposList';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
@@ -38,7 +35,7 @@ import saga from './saga';
 
 const key = 'home';
 
-export function HomePage({
+export function TemplateHomePage({
   username,
   loading,
   error,
@@ -63,38 +60,26 @@ export function HomePage({
   return (
     <article>
       <Helmet>
-        <title>Home Page</title>
+        <title>Template Home Page</title>
         <meta
           name="description"
           content="A React.js Boilerplate application homepage"
         />
       </Helmet>
       <div>
-        {/* <CenteredSection>
+        <CenteredSection>
           <H2>
             <FormattedMessage {...messages.startProjectHeader} />
           </H2>
           <p>
             <FormattedMessage {...messages.startProjectMessage} />
           </p>
-        </CenteredSection> */}
+        </CenteredSection>
         <Section>
-          <H1>
-            <FormattedMessage {...messages.michelleTitle} />
-          </H1>
-          <H3>
-            <FormattedMessage {...messages.bioMessage} />
-          </H3>
-          <p>
-            <FormattedMessage 
-              {...messages.introMessage}
-              values={{
-                item1: <Link to="/work">my favorite work</Link>,
-                item2: <Link to="/about">my experiences</Link>,
-                item3: <Link to="/misc">my random thoughts</Link>,
-              }} />
-          </p>
-          {/* <Form onSubmit={onSubmitForm}>
+          <H2>
+            <FormattedMessage {...messages.trymeHeader} />
+          </H2>
+          <Form onSubmit={onSubmitForm}>
             <label htmlFor="username">
               <FormattedMessage {...messages.trymeMessage} />
               <AtPrefix>
@@ -108,7 +93,7 @@ export function HomePage({
                 onChange={onChangeUsername}
               />
             </label>
-          </Form> */}
+          </Form>
           <ReposList {...reposListProps} />
         </Section>
       </div>
@@ -116,7 +101,7 @@ export function HomePage({
   );
 }
 
-HomePage.propTypes = {
+TemplateHomePage.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
@@ -150,4 +135,4 @@ const withConnect = connect(
 export default compose(
   withConnect,
   memo,
-)(HomePage);
+)(TemplateHomePage);
