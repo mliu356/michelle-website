@@ -5,11 +5,13 @@
  * Renders an image, enforcing the usage of the alt="" tag
  */
 
+import styled from 'styled-components';
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
 function Img(props) {
-  return <img className={props.className} src={props.src} alt={props.alt} />;
+  return <img className={props.className} src={props.src} alt={props.alt} width="100%" />;
 }
 
 // We require the use of src and alt, only enforced by react in dev mode

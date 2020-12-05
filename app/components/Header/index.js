@@ -13,11 +13,14 @@ function Header() {
     <div>
       <NavBar>
         <HeaderLink to="/">
-          <FormattedMessage {...messages.home} />
+          <FormattedMessage {...messages.michelle} />
         </HeaderLink>
-        <HeaderLink to="/template">
+        <HeaderLink to="/work">
+          <FormattedMessage {...messages.projects} />
+        </HeaderLink>
+        {/* <HeaderLink to="/template">
           <FormattedMessage {...messages.template} />
-        </HeaderLink>
+        </HeaderLink> */}
         <HeaderLink to="/features">
           <FormattedMessage {...messages.features} />
         </HeaderLink>
