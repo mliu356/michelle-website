@@ -18,37 +18,72 @@ import ProjectsPage from 'containers/ProjectsPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import Headshot from 'images/grad_horiz_headshot.jpg';
+import NavBackground from 'images/header-background.png';
 
 import GlobalStyle from '../../global-styles';
 
+const BackgroundImage = styled.div`
+  background-color: #fffafa;
+  background-image: url(${Headshot});
+  background-size: cover;
+  background-position: top;
+  min-height: 100%;
+`;
+
 const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
+  // max-width: calc(768px + 16px * 2);
+  max-width: calc(1000px + 16px * 2);
   margin: 0 auto;
   display: flex;
-  min-height: 100%;
+  // min-height: 100%;
   padding: 0 16px;
   flex-direction: column;
 `;
 
+const BackgroundColor = styled.div`
+  background-color: #fffafa;
+  min-height: 100%;
+`;
+
+const NavBarBackground = styled.div`
+  text-align: center;
+  background-image: url(${NavBackground});
+  background-size: cover;
+  background-position: top;
+`;
+
+
 export default function App() {
   return (
-    <AppWrapper>
-      <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
-      >
-        <meta name="description" content="A React.js Boilerplate application" />
-      </Helmet>
-      <Header />
+    <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/work" component={ProjectsPage} />
-        {/* <Route exact path="/template" component={TemplateHomePage} /> */}
-        <Route path="/features" component={FeaturePage} />
-        <Route path="" component={NotFoundPage} />
+        <Route exact path="/" >
+          <BackgroundImage>
+            <Header/>
+            <AppWrapper>
+              <HomePage/>
+              <GlobalStyle />
+            </AppWrapper>
+          </BackgroundImage>
+        </Route>
+        <Route path="">
+          <BackgroundColor>
+            <NavBarBackground>
+              <Header/>
+            </NavBarBackground>
+            <AppWrapper>
+              <Switch>
+                <Route path="/work" component={ProjectsPage} />
+                <Route path="/features" component={FeaturePage} />
+                <Route path="" component={NotFoundPage} />
+              </Switch>
+              <GlobalStyle />
+            </AppWrapper>
+          </BackgroundColor>
+        </Route>
       </Switch>
       <Footer />
-      <GlobalStyle />
-    </AppWrapper>
+    </div>
   );
 }

@@ -5,20 +5,18 @@
  */
 
 import React from 'react';
+import styled from 'styled-components';
+
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router-dom';
-import Img from 'components/Img';
-import H1 from 'components/H1';
-import H3 from 'components/H3';
-import ColumnContainer from './ColumnContainer';
-import Section from './Section';
-import messages from './messages';
-import MichelleHeadshot from 'images/michelle_gt_sitting.jpg';
+
+const EmptyImageContainer = styled.div`
+  min-height: 700px;
+  height: 93vh;
+`;
 
 export default function HomePage() {
   return (
-    <article>
+    <div>
       <Helmet>
         <title>Home Page</title>
         <meta
@@ -26,7 +24,9 @@ export default function HomePage() {
           content="Home page and landing page"
         />
       </Helmet>
-      <ColumnContainer>
+      <EmptyImageContainer/>
+
+      {/* <ColumnContainer>
         <Section>
           <H1>
             <FormattedMessage {...messages.michelleTitle} />
@@ -44,12 +44,12 @@ export default function HomePage() {
               }} />
           </p>
         </Section>
-        <Section>
+        <ImageContainer>
           <Img src={MichelleHeadshot} alt="Michelle headshot">
               
           </Img>
-        </Section>
-      </ColumnContainer>
-    </article>
+        </ImageContainer>
+      </ColumnContainer> */}
+    </div>
   );
 };

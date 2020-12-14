@@ -13,19 +13,20 @@ import heart from 'images/yellow_heart_clear.png';
 import ProjectCard from './ProjectCard';
 
 export default function ProjectsPage() {
-  // add to messages
-  const projectContent = {
-    project1: {
+  const projectContent = [
+    { 
+      key: 0,
       name: "Project1",
       content: "Project1 content",
       image: heart
     },
-    project2: {
-      name: "Project1",
-      content: "Project1 content",
+    {
+      key: 1,
+      name: "Project2",
+      content: "Project2 content",
       image: heart
     }
-  }
+  ]
 
   return (
     <div>
@@ -39,8 +40,7 @@ export default function ProjectsPage() {
       <H1>
         <FormattedMessage {...messages.title} />
       </H1>
-      <ProjectCard content="Project 1"/>
-
+      {projectContent.map((project) => <ProjectCard content={project.content} key={project.key} />)}
     </div>
   );
 }

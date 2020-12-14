@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import React from 'react';
 
 const ProjectCardContainer = styled.section`
-  margin: 3em auto;
-  margin-top: 0;
+  margin: 1em auto;
+//   margin-top: 0;
+  background-color: #cce7e8;
 `;
 
 ProjectCard.propTypes = {
