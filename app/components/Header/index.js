@@ -3,7 +3,9 @@ import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 
 import HeaderLink from './HeaderLink';
+import HeaderExLink from './HeaderExLink';
 import messages from './messages';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -43,9 +45,21 @@ function Header() {
           <HeaderLink to="/work">
             <FormattedMessage {...messages.projects} />
           </HeaderLink>
-          <HeaderLink to="/features">
-            <FormattedMessage {...messages.features} />
-          </HeaderLink>
+          <a href="http://github.com/mliu356" target="_">
+            <HeaderExLink>
+              <FaGithub/>
+            </HeaderExLink>
+          </a>
+          <a href="https://www.linkedin.com/in/mliu356/" target="_">
+            <HeaderExLink>
+              <FaLinkedin/>
+            </HeaderExLink>
+          </a>
+          <a href="mailto:mliu356@stanford.edu" target="_">
+            <HeaderExLink>
+              <FaEnvelope/>
+            </HeaderExLink>
+          </a>
         </RightNav>
       </TextLayout>
     </HeaderContainer>
