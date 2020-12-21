@@ -22,7 +22,7 @@ function Footer() {
         <FormattedMessage
           {...messages.developerMessage}
           values={{
-            author: <A href="https://github.com/mliu356" target="_blank">Michelle Liu</A>,
+            author: <A href="https://github.com/mliu356" target="_blank">michelle liu</A>,
           }}
         />
         

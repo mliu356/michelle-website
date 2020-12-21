@@ -11,22 +11,21 @@ const HeaderContainer = styled.div`
 `;
 
 const TextLayout = styled.div`
-  width: calc(1000px + 16px * 2);
+  padding: 0 48px;
+  width: calc(1000px + 48px * 2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
 
-const EmptyFlex = styled.div`
-  width: calc(1000px + 16px * 2);
-`;
-
 const LeftNav = styled.div`
+  margin-left: -16px;
   text-align: left;
   display: flex;
 `;
 
 const RightNav = styled.div`
+  margin-right: -16px;
   text-align: right;
   display: flex;
 `;

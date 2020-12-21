@@ -7,10 +7,38 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 
+import styled from 'styled-components';
 import H1 from 'components/H1';
 import messages from './messages';
 import heart from 'images/yellow_heart_clear.png';
 import ProjectCard from './ProjectCard';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Title = styled.div`
+  padding-top: 32px;
+  padding-bottom: 8px;
+  display: inline-flex;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  color: #000000;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+`;
+
+const Text = styled.div`
+  padding: 2px 0px;
+  display: inline-flex;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  color: #000000;
+`;
 
 export default function ProjectsPage() {
   const projectContent = [
@@ -30,17 +58,14 @@ export default function ProjectsPage() {
 
   return (
     <div>
-      <Helmet>
-        <title>Feature Page</title>
-        <meta
-          name="description"
-          content="Feature page of React.js Boilerplate application"
-        />
-      </Helmet>
-      <H1>
+      <Container>
+        <Title>my projects</Title>
+        <Text>everything i've ever done...</Text>
+      </Container>
+      {/* <H1>
         <FormattedMessage {...messages.title} />
       </H1>
-      {projectContent.map((project) => <ProjectCard content={project.content} key={project.key} />)}
+      {projectContent.map((project) => <ProjectCard content={project.content} key={project.key} />)} */}
     </div>
   );
 }

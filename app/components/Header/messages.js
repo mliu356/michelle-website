@@ -14,18 +14,18 @@ export default defineMessages({
   },
   michelle: {
     id: `${scope}.michelle`,
-    defaultMessage: 'm i c h e l l e',
+    defaultMessage: 'michelle liu',
   },
   projects: {
     id: `${scope}.projects`,
-    defaultMessage: 'p r o j e c t s',
+    defaultMessage: 'projects',
   },
   template: {
     id: `${scope}.template`,
-    defaultMessage: 't e m p l a t e',
+    defaultMessage: '<template>',
   },
   features: {
     id: `${scope}.feature`,
-    defaultMessage: 'f e a t u r e s',
+    defaultMessage: '<features>',
   },
 });

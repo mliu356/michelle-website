@@ -6,50 +6,41 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import ProjectsPage from 'containers/ProjectsPage/Loadable';
 
-import { Helmet } from 'react-helmet';
-
-const EmptyImageContainer = styled.div`
-  min-height: 700px;
-  height: 93vh;
+const SplashContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
-export default function HomePage() {
-  return (
-    <div>
-      <Helmet>
-        <title>Home Page</title>
-        <meta
-          name="description"
-          content="Home page and landing page"
-        />
-      </Helmet>
-      <EmptyImageContainer/>
+const Title = styled.div`
+  padding-top: 32px;
+  padding-bottom: 8px;
+  display: inline-flex;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  color: #000000;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+`;
 
-      {/* <ColumnContainer>
-        <Section>
-          <H1>
-            <FormattedMessage {...messages.michelleTitle} />
-          </H1>
-          <H3>
-            <FormattedMessage {...messages.bioMessage} />
-          </H3>
-          <p>
-            <FormattedMessage 
-              {...messages.introMessage}
-              values={{
-                item1: <Link to="/work">my favorite work</Link>,
-                item2: <Link to="/about">my experiences</Link>,
-                item3: <Link to="/misc">my random thoughts</Link>,
-              }} />
-          </p>
-        </Section>
-        <ImageContainer>
-          <Img src={MichelleHeadshot} alt="Michelle headshot">
-              
-          </Img>
-        </ImageContainer>
-      </ColumnContainer> */}
-    </div>
+const Text = styled.div`
+  padding: 2px 0px;
+  display: inline-flex;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  color: #000000;
+`;
+
+export default function SplashPage() {
+  return (
+    <SplashContainer>
+        <Title>my journey</Title>
+        <Text>how I ended up a smol fish in a big, big pond... </Text>
+        <ProjectsPage/>
+    </SplashContainer>
   );
 };

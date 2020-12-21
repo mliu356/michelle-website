@@ -15,7 +15,7 @@ export default defineMessages({
   developerMessage: {
     id: `${scope}.developer.message`,
     defaultMessage: `
-      Made with 💛 by {author}.
+      made with 💛 by {author}.
     `,
   },
 });

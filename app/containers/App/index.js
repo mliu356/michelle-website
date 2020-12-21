@@ -12,7 +12,7 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import TemplateHomePage from 'containers/TemplateHomePage/Loadable';
+import SplashPage from 'containers/SplashPage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import ProjectsPage from 'containers/ProjectsPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -32,12 +32,11 @@ const BackgroundImage = styled.div`
 `;
 
 const AppWrapper = styled.div`
-  // max-width: calc(768px + 16px * 2);
-  max-width: calc(1000px + 16px * 2);
+  max-width: calc(1000px + 48px * 2);
   margin: 0 auto;
   display: flex;
   // min-height: 100%;
-  padding: 0 16px;
+  padding: 0 48px;
   flex-direction: column;
 `;
 
@@ -53,7 +52,6 @@ const NavBarBackground = styled.div`
   background-position: top;
 `;
 
-
 export default function App() {
   return (
     <div>
@@ -62,10 +60,13 @@ export default function App() {
           <BackgroundImage>
             <Header/>
             <AppWrapper>
-              <HomePage/>
+              <SplashPage/>
               <GlobalStyle />
             </AppWrapper>
           </BackgroundImage>
+          <AppWrapper>
+            <HomePage/>
+          </AppWrapper>
         </Route>
         <Route path="">
           <BackgroundColor>
