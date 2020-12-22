@@ -9,7 +9,6 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaAngleDoubleDown } from 'react-icons/fa'
 
-import Title from 'components/Title';
 import { Helmet } from 'react-helmet';
 
 const EmptyImageContainer = styled.div`
@@ -17,6 +16,20 @@ const EmptyImageContainer = styled.div`
   height: 95vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+`;
+
+const Title = styled.div`
+  padding-top: 72px;
+  display: inline-flex;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+  text-shadow: 2px 2px 8px #696969;
 `;
 
 const Subtitle = styled.div`
