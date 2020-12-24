@@ -20,7 +20,7 @@ const EmptyImageContainer = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 72px;
+  padding-top: 48px;
   display: inline-flex;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;

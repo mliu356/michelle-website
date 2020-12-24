@@ -16,6 +16,7 @@ import ProjectCard from './ProjectCard';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled.div`
@@ -60,7 +61,7 @@ export default function ProjectsPage() {
     <div>
       <Container>
         <Title>my projects</Title>
-        <Text>everything i've ever done...</Text>
+        <Text>here is everything i've ever done lmao...</Text>
       </Container>
       {/* <H1>
         <FormattedMessage {...messages.title} />

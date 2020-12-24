@@ -13,6 +13,7 @@ const Wrapper = styled.footer`
   padding: 3em 0;
   padding-top: 3em;
   // border-top: 1px solid #666;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 `;
 
 function Footer() {
