@@ -20,7 +20,7 @@ const EmptyImageContainer = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 48px;
+  padding-top: 24px;
   display: inline-flex;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -33,7 +33,6 @@ const Title = styled.div`
 `;
 
 const Subtitle = styled.div`
-  padding-left: 2px;
   display: inline-block;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -47,7 +46,7 @@ const Subtitle = styled.div`
 
 const IconAnimation = styled.div`
   color: #ffffff;
-  font-size: 28px;
+  font-size: 20px;
 `;
 
 export default function SplashPage() {

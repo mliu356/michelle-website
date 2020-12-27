@@ -24,7 +24,6 @@ import NavBackground from 'images/header-background.png';
 import GlobalStyle from '../../global-styles';
 
 const BackgroundImage = styled.div`
-  background-color: #fffafa;
   background-image: url(${Headshot});
   background-size: cover;
   background-position: top;
@@ -41,7 +40,7 @@ const AppWrapper = styled.div`
 `;
 
 const BackgroundColor = styled.div`
-  background-color: #fffafa;
+  background-color: #e3e3e3;
   min-height: 100%;
 `;
 
